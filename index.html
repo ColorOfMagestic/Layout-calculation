@@ -13,38 +13,39 @@
         <section class="calculator">
             <form class="calc_form">
                 <label class="calc_label">Простой блок
-                    <input class="calc_input calc_input_block" type="number">
+                    <input class="calc_input calc_input_block calc_input--gen" type="number" min="0">
                 </label>
                 <label class="calc_label">Сложный блок	
-                    <input class="calc_input calc_input_block" type="number">
+                    <input class="calc_input calc_input_complex-block calc_input--gen" type="number" min="0">
                 </label>
                 <label class="calc_label">Меню
-                    <input class="calc_input" type="number">
+                    <input class="calc_input calc_input_menu calc_input--gen" type="number" min="0">
                 </label>
                 <label class="calc_label">Форма простая 3 инпута
-                    <input class="calc_input" type="number">
+                    <input class="calc_input calc_input_form-simple calc_input--gen" type="number" min="0">
                 </label>
                 <label class="calc_label">Форма сложная свыше 3х
-                    <input class="calc_input" type="number">
+                    <input class="calc_input calc_input_form-complex calc_input--gen" type="number" min="0">
                 </label>
                 <label class="calc_label">Слайдер
-                    <input class="calc_input" type="number">
+                    <input class="calc_input calc_input_slider calc_input--gen" type="number" min="0">
                 </label>
                 <label class="calc_label">Видео
-                    <input class="calc_input" type="number">
+                    <input class="calc_input calc_input_video calc_input--gen" type="number" min="0">
                 </label>
                 <label class="calc_label">Таблица
-                    <input class="calc_input" type="number">
-                </label>
-                <label class="calc_label">Aдаптив
-                    <input class="calc_input" type="number">
+                    <input class="calc_input calc_input_table calc_input--gen" type="number" min="0">
                 </label>
                 <label class="calc_label">Cелект
-                    <input class="calc_input" type="number">
+                    <input class="calc_input calc_input_select" type="number" min="0">
                 </label>
                 <label class="calc_label">Пагинация
-                    <input class="calc_input" type="number">
+                    <input class="calc_input calc_input_pagination" type="number" min="0">
                 </label>
+                <label class="calc_label">Aдаптив
+                    <input class="calc_input calc_input_adaptive" type="checkbox">
+                </label>
+
             </form>
         </section>
         <button class="btn_total">Рассчитать</button>
@@ -53,24 +54,3 @@
 </body>
 <script src="script.js"></script>
 </html>
-
-
-<!-- Расчет верстки					
-
-Блоки		                       Кол-во			Нюансы
-
-Простой блок	               350	11	3850		адаптив   150
-Сложный блок	               500	11	3850		адаптив   150
-Меню	                       500	1	500		
-Форма простая 3 инпута         300	0	0		
-Форма сложная свыше 3х	       500	0	0		    селект    200
-Слайдер	                       500	3	2100		пагинация 150
-Видео	                       500	1	600		
-Таблица	                       500	0	0		
-
-		Всего блоков 16	  Всего	7050	
-
-
-				Итого	
-				9450	
- -->
