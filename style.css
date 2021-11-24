@@ -42,3 +42,30 @@ body {
     border-radius: 15px;
     outline: none;
 }
+
+.btn-total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    margin: 25px auto;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid rgb(158, 223, 85);
+    border-radius: 15px;
+    outline: none;
+}
+
+.btn-total:active {
+    transform: translate(2px, 2px);
+}
+
+.out {
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    border: 2px solid rgb(158, 223, 85);
+    border-radius: 15px;
+}
