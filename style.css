@@ -17,7 +17,7 @@ body {
     text-align: center;
 }
 
-.calc-form {
+.calc_form {
     width: 50%;
     margin: 0 auto;
     display: flex;
@@ -25,12 +25,12 @@ body {
     align-items: center;
 }
 
-.calc-label {
+.calc_label {
     width: 48%;
     margin-bottom: 1.2rem;
 }
 
-.calc-input {
+.calc_input {
     display: block;
     margin-top: 0.6rem;
     margin-right: auto;
@@ -43,7 +43,7 @@ body {
     outline: none;
 }
 
-.btn-total {
+.btn_total {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +58,7 @@ body {
     outline: none;
 }
 
-.btn-total:active {
+.btn_total:active {
     transform: translate(2px, 2px);
 }
 
