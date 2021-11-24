@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout calculation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Layout calculation</h1>
+        <section class="calculator">
+            <form class="calc-form">
+                <label class="calc-label">Простой блок
+                    <input class="calc-input" type="number">
+                </label>
+                <label class="calc-label">Сложный блок	
+                    <input class="calc-input" type="number">
+                </label>
+                <label class="calc-label">Меню
+                    <input class="calc-input" type="number">
+                </label>
+                <label class="calc-label">Форма простая 3 инпута
+                    <input class="calc-input" type="number">
+                </label>
+                <label class="calc-label">Форма сложная свыше 3х
+                    <input class="calc-input" type="number">
+                </label>
+                <label class="calc-label">Слайдер
+                    <input class="calc-input" type="number">
+                </label>
+                <label class="calc-label">Видео
+                    <input class="calc-input" type="number">
+                </label>
+                <label class="calc-label">Таблица
+                    <input class="calc-input" type="number">
+                </label>
+                <label class="calc-label">Aдаптив
+                    <input class="calc-input" type="number">
+                </label>
+                <label class="calc-label">Cелект
+                    <input class="calc-input" type="number">
+                </label>
+                <label class="calc-label">Пагинация
+                    <input class="calc-input" type="number">
+                </label>
+            </form>
+        </section>    
+    </div>    
+</body>
+<script src="script.js"></script>
+</html>
+
+
+<!-- Расчет верстки					
+
+Блоки		                       Кол-во			Нюансы
+
+Простой блок	               350	11	3850		адаптив   150
+Сложный блок	               500	11	3850		адаптив   150
+Меню	                       500	1	500		
+Форма простая 3 инпута         300	0	0		
+Форма сложная свыше 3х	       500	0	0		    селект    200
+Слайдер	                       500	3	2100		пагинация 150
+Видео	                       500	1	600		
+Таблица	                       500	0	0		
+
+		Всего блоков 16	  Всего	7050	
+
+
+				Итого	
+				9450	
+ -->
