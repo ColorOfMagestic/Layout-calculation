@@ -1,4 +1,4 @@
-"use strict"
+'use strict';
 // Inputs
 const inputs = document.querySelectorAll('.calc_input');
 const inputsGen = document.querySelectorAll('.calc_input--gen');
@@ -20,6 +20,7 @@ const total = document.querySelector('.btn_total');
 
 // Out
 const out = document.querySelector('.out');
+const outDollar = document.querySelector('.out-dollar');
 
 // Price
 
@@ -35,44 +36,71 @@ const adaptivePrice = 150;
 const selectPrice = 200;
 const paginationPrice = 150;
 
-inputs.forEach(item => item.value=0);
+inputs.forEach((item) => (item.value = 0));
 
-total.addEventListener('click', function(e) {
+let priceRub;
+
+total.addEventListener('click', function (e) {
     e.preventDefault();
 
-const inputsGenArray = Array.from(inputsGen);
+    const inputsGenArray = Array.from(inputsGen);
 
-const inputsGenArrayValues = inputsGenArray.map(item => +item.value);
+    const inputsGenArrayValues = inputsGenArray.map((item) => +item.value);
 
     const totalBlocks = function (arr) {
-        return arr.reduce((acc,el)=> acc+el,0);
-    }
+        return arr.reduce((acc, el) => acc + el, 0);
+    };
 
-    const totalPrice = function (inp,price) {
-        return +inp.value * price
-    }
-    const totalAdaptivePrice = function(){
+    const totalPrice = function (inp, price) {
+        return +inp.value * price;
+    };
+    const totalAdaptivePrice = function () {
         if (adaptive.checked) {
             return totalBlocks(inputsGenArrayValues) * adaptivePrice;
-        }else {
+        } else {
             return 0;
         }
+    };
+    const totalAdaptive = totalAdaptivePrice();
+
+    const totalBlockPrice = totalPrice(block, blockPrice);
+    const totalComplexBlockPrice = totalPrice(complexBlock, complexBlockPrice);
+    const totalMenuPrice = totalPrice(menu, menuPrice);
+    const totalFormSimplePrice = totalPrice(formSimple, formSimplePrice);
+    const totalFormComplexPrice = totalPrice(formComplex, formComplexPrice);
+    const totalSliderPrice = totalPrice(slider, sliderPrice);
+    const totalVideoPrice = totalPrice(video, videoPrice);
+    const totalTablePrice = totalPrice(table, tablePrice);
+    const totalSelectPrice = totalPrice(select, selectPrice);
+    const totalPaginationPrice = totalPrice(pagination, paginationPrice);
+
+    const generalArray = [
+        totalBlockPrice,
+        totalComplexBlockPrice,
+        totalMenuPrice,
+        totalFormSimplePrice,
+        totalFormComplexPrice,
+        totalSliderPrice,
+        totalVideoPrice,
+        totalTablePrice,
+        totalSelectPrice,
+        totalPaginationPrice,
+        totalAdaptive,
+    ];
+
+    priceRub = generalArray.reduce((acc, el) => acc + el, 0);
+
+    fetch('https://www.cbr-xml-daily.ru/daily_json.js')
+        .then((response) => {
+            return response.json();
+        })
+        .then(showCourse);
+
+    function showCourse(data) {
+        const courseUSD = Math.trunc(data.Valute.USD.Value);
+        outDollar.textContent = `${Math.ceil(priceRub / courseUSD)} USD`;
+        console.log(courseUSD);
     }
-const totalAdaptive = totalAdaptivePrice();
-    
-const totalBlockPrice = totalPrice(block,blockPrice);
-const totalComplexBlockPrice = totalPrice(complexBlock,complexBlockPrice);
-const totalMenuPrice = totalPrice(menu,menuPrice);
-const totalFormSimplePrice = totalPrice(formSimple,formSimplePrice);
-const totalFormComplexPrice = totalPrice(formComplex,formComplexPrice);
-const totalSliderPrice = totalPrice(slider,sliderPrice);
-const totalVideoPrice = totalPrice(video,videoPrice);
-const totalTablePrice = totalPrice(table,tablePrice);
-const totalSelectPrice = totalPrice(select,selectPrice);
-const totalPaginationPrice = totalPrice(pagination,paginationPrice);
 
-const generalArray = [totalBlockPrice,totalComplexBlockPrice,totalMenuPrice,totalFormSimplePrice,totalFormComplexPrice,totalSliderPrice,totalVideoPrice,totalTablePrice,totalSelectPrice,totalPaginationPrice,totalAdaptive];
-
-out.innerHTML = generalArray.reduce((acc,el) => acc+el,0 );
+    out.textContent = `${priceRub} : RUB`;
 });
-
