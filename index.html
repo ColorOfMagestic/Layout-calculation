@@ -1,59 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout calculation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1 class="title">Layout calculation</h1>
-        <section class="calculator">
-            <form class="calc_form">
-                <label class="calc_label">Простой блок
-                    <input class="calc_input calc_input_block calc_input--gen" type="number" min="0">
-                </label>
-                <label class="calc_label">Сложный блок	
-                    <input class="calc_input calc_input_complex-block calc_input--gen" type="number" min="0">
-                </label>
-                <label class="calc_label">Меню
-                    <input class="calc_input calc_input_menu calc_input--gen" type="number" min="0">
-                </label>
-                <label class="calc_label">Форма простая 3 инпута
-                    <input class="calc_input calc_input_form-simple calc_input--gen" type="number" min="0">
-                </label>
-                <label class="calc_label">Форма сложная свыше 3х
-                    <input class="calc_input calc_input_form-complex calc_input--gen" type="number" min="0">
-                </label>
-                <label class="calc_label">Слайдер
-                    <input class="calc_input calc_input_slider calc_input--gen" type="number" min="0">
-                </label>
-                <label class="calc_label">Видео
-                    <input class="calc_input calc_input_video calc_input--gen" type="number" min="0">
-                </label>
-                <label class="calc_label">Таблица
-                    <input class="calc_input calc_input_table calc_input--gen" type="number" min="0">
-                </label>
-                <label class="calc_label">Cелект
-                    <input class="calc_input calc_input_select" type="number" min="0">
-                </label>
-                <label class="calc_label">Пагинация
-                    <input class="calc_input calc_input_pagination" type="number" min="0">
-                </label>
-                <label class="calc_label">Aдаптив
-                    <input class="calc_input calc_input_adaptive" type="checkbox">
-                </label>
-                <label class="calc_label none">
-                    
-                </label>
-
-            </form>
-        </section>
-        <button class="btn_total">Рассчитать</button>
-        <div class="out"></div>
-    </div>
-</body>
-<script src="script.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Layout calculation</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Layout calculation</h1>
+            <section class="calculator">
+                <form class="calc_form">
+                    <label class="calc_label"
+                        >Простой блок
+                        <input
+                            class="calc_input calc_input_block calc_input--gen"
+                            type="number"
+                            min="0"
+                        />
+                    </label>
+                    <label class="calc_label"
+                        >Сложный блок
+                        <input
+                            class="
+                                calc_input calc_input_complex-block
+                                calc_input--gen
+                            "
+                            type="number"
+                            min="0"
+                        />
+                    </label>
+                    <label class="calc_label"
+                        >Меню
+                        <input
+                            class="calc_input calc_input_menu calc_input--gen"
+                            type="number"
+                            min="0"
+                        />
+                    </label>
+                    <label class="calc_label"
+                        >Форма простая 3 инпута
+                        <input
+                            class="
+                                calc_input calc_input_form-simple
+                                calc_input--gen
+                            "
+                            type="number"
+                            min="0"
+                        />
+                    </label>
+                    <label class="calc_label"
+                        >Форма сложная свыше 3х
+                        <input
+                            class="
+                                calc_input calc_input_form-complex
+                                calc_input--gen
+                            "
+                            type="number"
+                            min="0"
+                        />
+                    </label>
+                    <label class="calc_label"
+                        >Слайдер
+                        <input
+                            class="calc_input calc_input_slider calc_input--gen"
+                            type="number"
+                            min="0"
+                        />
+                    </label>
+                    <label class="calc_label"
+                        >Видео
+                        <input
+                            class="calc_input calc_input_video calc_input--gen"
+                            type="number"
+                            min="0"
+                        />
+                    </label>
+                    <label class="calc_label"
+                        >Таблица
+                        <input
+                            class="calc_input calc_input_table calc_input--gen"
+                            type="number"
+                            min="0"
+                        />
+                    </label>
+                    <label class="calc_label"
+                        >Cелект
+                        <input
+                            class="calc_input calc_input_select"
+                            type="number"
+                            min="0"
+                        />
+                    </label>
+                    <label class="calc_label"
+                        >Пагинация
+                        <input
+                            class="calc_input calc_input_pagination"
+                            type="number"
+                            min="0"
+                        />
+                    </label>
+                    <label class="calc_label"
+                        >Aдаптив
+                        <input
+                            class="calc_input calc_input_adaptive"
+                            type="checkbox"
+                        />
+                    </label>
+                    <label class="calc_label none"> </label>
+                </form>
+            </section>
+            <button class="btn_total">Рассчитать</button>
+            <div class="out"></div>
+            <div class="out out-dollar"></div>
+        </div>
+    </body>
+    <script src="script.js"></script>
 </html>

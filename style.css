@@ -49,6 +49,12 @@ body {
     border: 2px solid rgb(158, 223, 85);
     border-radius: 15px;
     outline: none;
+    appearance: none;
+    -moz-appearance:textfield;
+}
+
+.calc_input:focus {
+    appearance: none;
 }
 
 .calc_input_adaptive {
@@ -90,6 +96,10 @@ body {
     margin: 0 auto;
     border: 2px solid rgb(158, 223, 85);
     border-radius: 15px;
+}
+
+.out-dollar {
+    margin-top: 30px;
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
